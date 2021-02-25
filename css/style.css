@@ -1,0 +1,487 @@
+/* ====================== Global ====================== */
+* {
+  --vinho: #a30404;
+  --amarelo: #fed40e;
+  --gray: #e5e5e5;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 93.75%; /* 100% - 16px | 93.75% - 15px */
+}
+
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--vinho) url(../assets/img/bg_icons.svg);
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+.container {
+  width: min(90vw, 800vw);
+  padding-top: 4rem;
+  margin: auto;
+}
+
+.img-fluid{
+  width: max(14vw, 100px);
+  object-fit:cover;
+}
+
+.flex-center-full{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.text-center{
+  text-align: center;
+}
+
+/* ====================== Titles ====================== */
+h2, h4{
+  font-family: "Rum Raisin", sans-serif;
+  font-weight: normal;
+  color: var(--vinho)
+}
+
+h2{
+  color: var(--amarelo);
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+#galeria h2{
+  color: var(--vinho);
+  margin-bottom: 10px;
+}
+
+.dishes-day .col-1 h3:first-child{
+  font-size:1.2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.dishes-day .col-1 #box-dish-main h4{
+  color: var(--amarelo);
+}
+
+.dishes-day h4{
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--vinho)
+}
+
+.perfil-funcionario h4{
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 20px
+}
+
+#box-whats-delivery h4{
+  font-size: 4.2rem;
+}
+
+/* ====================== Links & Buttons ====================== */
+a {
+  text-decoration: none;
+}
+
+#box-arrow-down a {
+  color: var(--amarelo);
+}
+
+header ul li a {
+  padding: 10px;
+  color: var(--vinho);
+  transition: 0.3s ease;
+}
+
+header ul li a:hover {
+  background: var(--vinho);
+  color: var(--amarelo);
+}
+
+button {
+  background: var(--amarelo);
+  cursor: pointer;
+
+  padding: 10px 35px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 30px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.87);
+
+  color: var(--vinho);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: "Rum Raisin", sans-serif;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #fff;
+  color: var(--vinho);
+
+  padding: 10px 50px;
+}
+
+.btn-cardapio{
+  border: 3px solid var(--amarelo);
+  border-radius:46px;
+  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.87));
+
+  padding: 8px;
+  margin-top: 40px;
+  width: 160px;
+  max-width: 160px;
+  text-align: center;
+  cursor: pointer;
+  opacity: .6;
+  transition: all .3s
+}
+
+.btn-cardapio:hover, .active{
+  color: var(--vinho);
+  background: var(--amarelo);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ====================== Header ====================== */
+
+header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+header ul {
+  background: var(--amarelo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 30px;
+  height: 55px;
+  width: min(75vw, 800px);
+}
+
+header ul li {
+  list-style: none;
+
+  font-family: "Rum Raisin", sans-serif;
+  font-size: 2.2rem;
+
+  text-transform: uppercase;
+}
+
+#logo {
+  background: var(--amarelo);
+  border-radius: 800px;
+  height: 105px;
+  width: 110px;
+  margin-right: -55px;
+  margin-left: -55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo img {
+  height: 62px;
+  transition: all .3s;
+}
+
+#logo img:hover {
+  transform: scale(1.08);
+}
+
+/* ====================== Banner ====================== */
+
+#banner {
+  display: flex;
+  align-items: center;
+  height: 75vh;
+}
+
+#img-titulo-banner img {
+  width: max(25vw, 400px);
+}
+
+#left-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#description-banner {
+  position: relative;
+  top: -30px;
+  width: max(40%, 380px);
+}
+
+#left-banner p {
+  line-height: 44px;
+  letter-spacing: 0.8px;
+  color: #fff;
+  font-family: "Rum Raisin", sans-serif;
+}
+
+#description-banner p:first-child {
+  font-family: "Rum Raisin", sans-serif;
+  font-size: 1.9rem;
+}
+
+#description-banner p {
+  font-size: 1.6rem;
+}
+
+#description-banner i {
+  margin-left: 10px;
+  font-size: 2rem;
+}
+
+#right-banner img {
+  width: max(35vw, 500px);
+  transition: all .3s;
+}
+#right-banner img:hover {
+  transform: scale(1.02);
+}
+
+#box-arrow-down {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+#box-arrow-down i {
+  text-shadow: 1px 1px 20px #000;
+  opacity: .7;
+  transition: all .2s
+}
+#box-arrow-down i:hover {
+  opacity: 1;
+}
+
+#box-arrow-down{
+  padding: 0 0 4.5rem;
+}
+
+/* ====================== Section Cardápio ====================== */
+#cardapio{
+  background: #e5e5e5 url(../assets/img/bg_icons.svg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#box-cardapio{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 4rem 0;
+}
+
+#days-week{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  height: 670px;
+  padding: 40px 20px;
+
+  background: var(--vinho) url(../assets/img/bg_icons.svg);
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+#box-btn-cardapio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#box-btn-cardapio a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--amarelo);
+}
+
+#box-btn-cardapio a:first-child{
+  margin-top: 5px;
+}
+
+.dishes-day{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+  padding: 140px 60px 50px 20px;
+  background: rgba(229, 229, 229, 0.7)
+}
+
+.dishes-day .col-1{
+
+  display: flex;
+  flex-direction: column;
+}
+
+#box-dish-main{
+  background: var(--vinho);
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.contents-box-dish{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contents-box-dish p{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.contents-box-dish p small{
+  margin-left: 2px;
+  font-size: .8rem;
+}
+
+.dish{
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+.dish p{
+  color: #000;
+}
+
+/* ====================== Section Galeria ====================== */
+
+#box-galeria, #box-equipe{
+  display: flex;
+  justify-content: center;
+  background: #e5e5e5 url(../assets/img/bg_icons.svg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 100px;
+}
+
+#container-fotos, #container-equipe{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+#box-fotos, #box-fotos-equipe{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-top: 20px;
+}
+
+#galeria img{
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s
+}
+#galeria img:hover{
+  transform: scale(1.05)
+}
+
+#box-fotos-equipe img{
+  border-radius: 50%;
+}
+
+#box-fotos-equipe{
+  grid-gap: 50px;
+}
+
+.perfil-funcionario p{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #363636;
+} 
+/* ====================== Footer ====================== */
+
+footer{
+  background: #353535 url(../assets/img/bg_icons.svg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 4rem;
+}
+
+.box-info-contato{
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: max(30vw, 520px);
+  padding: 15px;
+  margin: 25px 0;
+}
+
+.box-info-contato p{
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+#phone.box-info-contato p{
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.box-info-contato i{
+  font-size: 2.4rem;
+  color: var(--vinho)
+}
+
+#box-whats-delivery{
+  background: #fff;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#box-whats-delivery p{
+  color: var(--vinho);
+  font-size: 1.3rem;
+}
+
+#box-whats-delivery img{
+  width: max(7vw, 110px);
+  position: absolute;
+  left: min(45vw, 630px);
+}
+
+#whats{
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  transition: all .3s;
+}
+
+#whats:hover{
+  transform: scale(1.05)
+}
+
+#whats i{
+  font-size: 3.8rem;
+  color: #34af23;
+}

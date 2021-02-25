@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rum+Raisin&display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
+  <title>Restaurante | Rapa do tacho</title>
+</head>
+
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <div id="logo">
+          <a href="#"><img src="assets/img/logo.png" alt="Logo Rapa do Tacho" /></a>
+        </div>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="banner" class="container">
+      <div id="left-banner">
+        <!-- adicionar um display flex, e direction em column -->
+        <div id="img-titulo-banner">
+          <h1>
+            <img src="assets/img/frase_banner.svg" alt="Experimente nossa feijoada" />
+          </h1>
+        </div>
+        <div id="description-banner" class="text-center">
+          <p>Atendimento de Segunda à Sábado das 11h às 15h</p>
+          <p>Fazemos também Delivery ou Retirada</p>
+          <button>Faça seu pedido<i class="fab fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <div id="right-banner">
+        <img src="assets/img/feijoada_banner.png" alt="Feijoada" />
+      </div>
+    </div>
+    <div id="box-arrow-down" class="text-center">
+      <a href="#cardapio"><i class="fas fa-arrow-down"></i></a>
+    </div>
+
+    <section id="cardapio">
+      <div id="box-cardapio" class="container">
+        <div id="days-week">
+          <h2>Cardápio</h2>
+          <div id="box-btn-cardapio">
+
+            <a onclick="showDishSelect.showDish(cardapioSegunda,'#select-segunda div')" id="select-segunda">
+              <div class="btn-cardapio">Segunda</div>
+            </a>
+            <a onclick="showDishSelect.showDish(cardapioTerca,'#select-terca div')" id="select-terca">
+              <div class="btn-cardapio active">Terça</div>
+            </a>
+            <a onclick="showDishSelect.showDish(cardapioQuartaSabado,'#select-quarta div') " id="select-quarta">
+              <div class="btn-cardapio">Quarta</div>
+            </a>
+            <a onclick="showDishSelect.showDish(cardapioQuinta,'#select-quinta div')" id="select-quinta">
+              <div class="btn-cardapio">Quinta</div>
+            </a>
+            <a onclick="showDishSelect.showDish(cardapioSexta,'#select-sexta div')" id="select-sexta">
+              <div class="btn-cardapio">Sexta</div>
+            </a>
+            <a onclick="showDishSelect.showDish(cardapioQuartaSabado,'#select-sabado div')" id="select-sabado">
+              <div class="btn-cardapio">Sábado</div>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="dishes-day">
+          <div class="col-1">
+            <h3>Pratos do dia</h3>
+            <div id="box-dish-main"></div>
+            <div id="box-dish"></div>
+          </div>
+          <div id="right-col" class="col-1"></div>
+        </div>
+
+      </div>
+    </section>
+    <section id="galeria">
+      <div id="box-galeria" class="container">
+        <div id="container-fotos">
+          <h2>Galeria</h2>
+          <div id="box-fotos">
+            <img class="img-fluid" src="./assets/Fotos/Captura de tela 2021-02-18 130501.jpg" alt="foto1">
+            <img class="img-fluid" src="./assets/Fotos/19.png" alt="foto1">
+            <img class="img-fluid" src="./assets/Fotos/20.png" alt="foto1">
+            <img class="img-fluid" src="./assets/Fotos/28.png" alt="foto1">
+            <img class="img-fluid" src="./assets/Fotos/7.png" alt="foto1">
+            <img class="img-fluid" src="./assets/Fotos/12.png" alt="foto1">
+            <img class="img-fluid" src="./assets/Fotos/Feijoada.jpg" alt="foto1">
+            <img class="img-fluid" src="./assets/Fotos/Captura de tela 2021-02-18 130347.jpg" alt="foto1">
+          </div>
+        </div>
+      </div>
+
+      <div id="box-equipe" class="container">
+
+        <div id="container-equipe">
+          <h2>Equipe</h2>
+
+          <div id="box-fotos-equipe">
+            <div class="perfil-funcionario flex-center-full text-center">
+              <img class="img-fluid" src="./assets/Fotos/homem1.png" alt="foto1">
+              <h4>Luiz Carlos e Janilce</h4>
+              <p>Proprietários</p>
+            </div>
+            <div class="perfil-funcionario flex-center-full text-center">
+              <img class="img-fluid" src="./assets/Fotos/mulher2.png" alt="foto1">
+              <h4>Janilce</h4>
+              <p>Cozinheira</p>
+            </div>
+            <div class="perfil-funcionario flex-center-full text-center">
+              <img class="img-fluid" src="./assets/Fotos/homem2.png" alt="foto1">
+              <h4>Ederson</h4>
+              <p>Auxiliar de Cozinha</p>
+            </div>
+            <div class="perfil-funcionario flex-center-full text-center">
+              <img class="img-fluid" src="./assets/Fotos/mulher1.png" alt="foto1">
+              <h4>Larissa</h4>
+              <p>Atendente de caixa</p>
+            </div>
+            <div class="perfil-funcionario flex-center-full text-center">
+              <img class="img-fluid" src="./assets/Fotos/homem1.png" alt="foto1">
+              <h4>Luiz Carlos e Janilce</h4>
+              <p>Proprietários</p>
+            </div>
+            <div class="perfil-funcionario flex-center-full text-center">
+              <img class="img-fluid" src="./assets/Fotos/mulher2.png" alt="foto1">
+              <h4>Janilce</h4>
+              <p>Cozinheira</p>
+            </div>
+            <div class="perfil-funcionario flex-center-full text-center">
+              <img class="img-fluid" src="./assets/Fotos/homem2.png" alt="foto1">
+              <h4>Ederson</h4>
+              <p>Auxiliar de Cozinha</p>
+            </div>
+            <div class="perfil-funcionario flex-center-full text-center">
+              <img class="img-fluid" src="./assets/Fotos/mulher1.png" alt="foto1">
+              <h4>Larissa</h4>
+              <p>Atendente de caixa</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="contato" class="container">
+      <h2>Contato</h2>
+      <div id="localization" class="box-info-contato"> <!-- flex direction row wrap; width 40 vw-->
+        <i class="fas fa-map-marker-alt"></i>
+        <div id="address">
+          <p>Rua: Professora Lucila Cerqueira, 369</p>
+          <p>São Paulo - SP | CEP: 08420-690</p>
+        </div>
+
+      </div>
+      <div id="phone" class="box-info-contato"> <!-- flex direction row wrap; width 40 vw-->
+        <i class="fas fa-phone-alt"></i>
+        <p>(11) 2552-8062 | (11) 98492-8128</p>
+      </div>
+
+      <div id="box-whats-delivery" class="box-info-contato text-align"> 
+        <div>
+          <p>Delivery ou Retirada, ligue ou peça via Whatsapp</p>
+          <a href="#" id="whats">
+            <h4>(11) 98492-8128</h4><i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+          <img class="img-fluid" src="./assets/img/delivery.png" alt="ícone moto delivery">
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/dishes.js"></script>
+</body>
+
+</html>
