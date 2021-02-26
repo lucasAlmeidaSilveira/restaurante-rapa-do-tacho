@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background: var(--vinho) url(../assets/img/bg_icons.svg);
@@ -451,7 +455,7 @@ header ul li {
 #box-fotos-equipe {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-gap: 45px;
   margin-top: 20px;
 }
 

@@ -146,6 +146,7 @@ const actions = {
 
     fecharModal(){
         modal.classList.toggle('modal-active')
+        document.querySelector('html').style.overflow = 'auto'
     }
 
 }
@@ -162,6 +163,7 @@ for(let i = 0; i < imagens.length; i++) {
         srcValue = imagens[i].getAttribute('src')
         modalImg.setAttribute('src', srcValue)
         modal.classList.toggle('modal-active')
+        document.querySelector('html').style.overflow = 'hidden'
     })
 }
 

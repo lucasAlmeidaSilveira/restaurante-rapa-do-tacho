@@ -50,6 +50,11 @@
         padding-bottom: 1rem;
     }
 
+    #menu-mobile #btn-menu-mobile i{
+        position: relative;
+        left: 20px;
+    }
+
     #close-menu{
         display:block;
     }
@@ -87,6 +92,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 0;
       }
 
     #box-btn-cardapio {
@@ -105,6 +111,34 @@
         grid-template-columns: 1fr;
         padding: 0 20px 20px;
     }
+
+    /* ====================== Section Galeria ====================== */
+
+    #box-galeria.container, #box-equipe.container{
+        width: min(90vw, 800vw);
+        padding-bottom: 4rem;
+    }
+
+    #box-fotos, #box-fotos-equipe {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .modal,.modal-content{
+        height: 100%;
+        width: 100%;
+    }
+
+    .small-img{
+        width: 100%;
+    }
+
+    #modal-img {
+        height: auto;
+        width: 85%;
+    }
+
+
 
 
 
