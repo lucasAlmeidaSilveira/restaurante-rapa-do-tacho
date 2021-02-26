@@ -9,7 +9,7 @@
   font-size: 93.75%; /* 100% - 16px | 93.75% - 15px */
 }
 
-html{
+html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -19,7 +19,6 @@ body {
   background: var(--vinho) url(../assets/img/bg_icons.svg);
   background-attachment: fixed;
   background-size: cover;
-
 }
 
 .container {
@@ -28,65 +27,70 @@ body {
   margin: auto;
 }
 
-.img-fluid{
+.img-fluid {
   width: max(14vw, 100px);
-  object-fit:cover;
+  object-fit: cover;
 }
 
-.flex-center-full{
+.flex-center-full {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 
-.text-center{
+.row {
+ flex-direction: row;
+}
+
+.text-center {
   text-align: center;
 }
 
 /* ====================== Titles ====================== */
-h2, h4{
+h2,
+h4 {
   font-family: "Rum Raisin", sans-serif;
   font-weight: normal;
-  color: var(--vinho)
+  color: var(--vinho);
 }
 
-h2{
+h2 {
   color: var(--amarelo);
   font-size: 3.5rem;
   text-transform: uppercase;
 }
 
-#galeria h2{
+#galeria h2 {
   color: var(--vinho);
   margin-bottom: 10px;
 }
 
-.dishes-day .col-1 h3:first-child{
-  font-size:1.2rem;
+.dishes-day .col-1 h3:first-child {
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 800;
 }
 
-.dishes-day .col-1 #box-dish-main h4{
+.dishes-day .col-1 #box-dish-main h4 {
   color: var(--amarelo);
 }
 
-.dishes-day h4{
+.dishes-day h4 {
   font-size: 1.8rem;
   text-transform: uppercase;
-  color: var(--vinho)
+  color: var(--vinho);
 }
 
-.perfil-funcionario h4{
+.perfil-funcionario h4 {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
-  margin-top: 20px
+  margin-top: 20px;
 }
 
-#box-whats-delivery h4{
+#box-whats-delivery h4 {
   font-size: 4.2rem;
 }
 
@@ -102,7 +106,7 @@ a {
 header ul li a {
   padding: 10px;
   color: var(--vinho);
-  transition: 0.3s ease;
+  transition: all 0.3s;
 }
 
 header ul li a:hover {
@@ -135,9 +139,9 @@ button:hover {
   padding: 10px 50px;
 }
 
-.btn-cardapio{
+.btn-cardapio {
   border: 3px solid var(--amarelo);
-  border-radius:46px;
+  border-radius: 46px;
   filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.87));
 
   padding: 8px;
@@ -146,11 +150,12 @@ button:hover {
   max-width: 160px;
   text-align: center;
   cursor: pointer;
-  opacity: .6;
-  transition: all .3s
+  opacity: 0.6;
+  transition: all 0.3s;
 }
 
-.btn-cardapio:hover, .active{
+.btn-cardapio:hover,
+.active {
   color: var(--vinho);
   background: var(--amarelo);
   opacity: 1;
@@ -159,10 +164,25 @@ button:hover {
 
 /* ====================== Header ====================== */
 
+#menu-mobile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20vw;
+}
+
+#menu-mobile i{
+  font-size: 2rem;
+  color: var(--amarelo)
+}
+
 header {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: center;  
+  align-items: center;
+  flex-direction: column;
 }
 
 header ul {
@@ -185,10 +205,14 @@ header ul li {
   text-transform: uppercase;
 }
 
+#close-menu, #menu-mobile{
+  display: none;
+}
+
 #logo {
   background: var(--amarelo);
   border-radius: 800px;
-  height: 105px;
+  height: 110px;
   width: 110px;
   margin-right: -55px;
   margin-left: -55px;
@@ -200,7 +224,7 @@ header ul li {
 
 #logo img {
   height: 62px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 #logo img:hover {
@@ -212,18 +236,12 @@ header ul li {
 #banner {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   height: 75vh;
 }
 
 #img-titulo-banner img {
   width: max(25vw, 400px);
-}
-
-#left-banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
 }
 
 #description-banner {
@@ -254,8 +272,8 @@ header ul li {
 }
 
 #right-banner img {
-  width: max(35vw, 500px);
-  transition: all .3s;
+  width: max(30vw, 500px);
+  transition: all 0.3s;
 }
 #right-banner img:hover {
   transform: scale(1.02);
@@ -267,51 +285,52 @@ header ul li {
 }
 #box-arrow-down i {
   text-shadow: 1px 1px 20px #000;
-  opacity: .7;
-  transition: all .2s
+  opacity: 0.7;
+  transition: all 0.2s;
 }
 #box-arrow-down i:hover {
   opacity: 1;
 }
 
-#box-arrow-down{
+#box-arrow-down {
   padding: 0 0 4.5rem;
 }
 
 /* ====================== Section Cardápio ====================== */
-#cardapio{
+#cardapio {
   background: #e5e5e5 url(../assets/img/bg_icons.svg);
   background-size: cover;
   background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-#box-cardapio{
+#box-cardapio {
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding: 4rem 0;
 }
 
-#days-week{
+#days-week {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
-  height: 670px;
+  justify-content: center;
   padding: 40px 20px;
 
   background: var(--vinho) url(../assets/img/bg_icons.svg);
   background-size: cover;
   background-attachment: fixed;
-
 }
 
-#box-btn-cardapio{
+#box-btn-cardapio {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#box-btn-cardapio a{
+#box-btn-cardapio a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -319,60 +338,101 @@ header ul li {
   color: var(--amarelo);
 }
 
-#box-btn-cardapio a:first-child{
+#box-btn-cardapio a:first-child {
   margin-top: 5px;
 }
 
-.dishes-day{
+.dishes-day {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;
   padding: 140px 60px 50px 20px;
-  background: rgba(229, 229, 229, 0.7)
+  background: rgba(229, 229, 229, 0.7);
 }
 
-.dishes-day .col-1{
-
+.dishes-day .col-1 {
   display: flex;
   flex-direction: column;
 }
 
-#box-dish-main{
+#box-dish-main {
   background: var(--vinho);
   padding: 10px 15px;
   border-radius: 15px;
   margin-top: 20px;
 }
 
-.contents-box-dish{
+.contents-box-dish {
   display: flex;
   justify-content: space-between;
 }
 
-.contents-box-dish p{
+.contents-box-dish p {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: 6px;
 }
 
-.contents-box-dish p small{
+.contents-box-dish p small {
   margin-left: 2px;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.dish{
+.dish {
   padding: 10px 15px;
   margin-top: 20px;
 }
 
-.dish p{
+.dish p {
   color: #000;
 }
 
 /* ====================== Section Galeria ====================== */
 
-#box-galeria, #box-equipe{
+#modal-img {
+  height: 100%;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.modal-content {
+  height: 75vh;
+}
+
+#btn-close {
+  color: #fff;
+  background: #353535;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 2.2rem;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  text-shadow: 0px 0px 10px #000;
+}
+
+.modal-active {
+  visibility: visible;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+#box-galeria,
+#box-equipe {
   display: flex;
   justify-content: center;
   background: #e5e5e5 url(../assets/img/bg_icons.svg);
@@ -381,107 +441,118 @@ header ul li {
   padding-bottom: 100px;
 }
 
-#container-fotos, #container-equipe{
+#container-fotos,
+#container-equipe {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 }
 
-#box-fotos, #box-fotos-equipe{
+#box-fotos,
+#box-fotos-equipe {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   margin-top: 20px;
 }
 
-#galeria img{
+#box-galeria img,
+#box-equipe img {
   height: auto;
   border-radius: 5px;
   cursor: pointer;
-  transition: all .3s
-}
-#galeria img:hover{
-  transform: scale(1.05)
+  transition: all 0.3s;
 }
 
-#box-fotos-equipe img{
+#box-galeria img:hover,
+#box-equipe img:hover {
+  transform: scale(1.05);
+  filter: grayscale(100%);
+}
+
+#box-fotos-equipe img {
   border-radius: 50%;
 }
 
-#box-fotos-equipe{
+#box-fotos-equipe {
   grid-gap: 50px;
 }
 
-.perfil-funcionario p{
+.perfil-funcionario p {
   font-size: 1rem;
   font-weight: 500;
   color: #363636;
-} 
+}
 /* ====================== Footer ====================== */
 
-footer{
+footer {
   background: #353535 url(../assets/img/bg_icons.svg);
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 4rem;
 }
 
-.box-info-contato{
+.box-info-contato {
   background: rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-  width: max(30vw, 520px);
+  width: max(20vw, 480px);
   padding: 15px;
   margin: 25px 0;
 }
 
-.box-info-contato p{
+.box-info-contato p {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
-#phone.box-info-contato p{
-  font-size: 1.6rem;
+#phone.box-info-contato p {
+  font-size: 1.4rem;
   font-weight: 500;
 }
 
-.box-info-contato i{
-  font-size: 2.4rem;
-  color: var(--vinho)
+.box-info-contato i {
+  font-size: 2.2rem;
+  color: var(--vinho);
 }
 
-#box-whats-delivery{
+#box-whats-delivery {
   background: #fff;
   padding: 10px 10px;
   justify-content: center;
   align-items: center;
 }
 
-#box-whats-delivery p{
+#box-whats-delivery p {
   color: var(--vinho);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
-#box-whats-delivery img{
+#box-whats-delivery img {
   width: max(7vw, 110px);
   position: absolute;
-  left: min(45vw, 630px);
+  left: min(42vw, 550px);
+  transition: all 0.3s;
 }
 
-#whats{
+.img-delivery-hover {
+  left: min(45vw, 600px) !important;
+}
+
+#whats {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-#whats:hover{
-  transform: scale(1.05)
+#whats:hover {
+  transform: scale(1.05);
 }
 
-#whats i{
-  font-size: 3.8rem;
+#whats i {
+  font-size: 3.6rem;
   color: #34af23;
+  margin-left: 7px;
 }

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-responsive.css" />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
@@ -22,11 +23,20 @@
 
 <body>
   <header class="container">
+    <div id="menu-mobile">
+      <div id="logo">
+        <a href="#"><img src="assets/img/logo.png" alt="Logo Rapa do Tacho" /></a>
+      </div>
+      <div id="btn-menu-mobile" onclick="mobile.openMenuMobile()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
     <nav>
       <ul>
+        <li id="close-menu" onclick="mobile.openMenuMobile()"><a href="#">&times;</a></li>
         <li><a href="#">Home</a></li>
         <li><a href="#cardapio">Cardápio</a></li>
-        <div id="logo">
+        <div class="d-none" id="logo">
           <a href="#"><img src="assets/img/logo.png" alt="Logo Rapa do Tacho" /></a>
         </div>
         <li><a href="#galeria">Galeria</a></li>
@@ -37,7 +47,7 @@
 
   <main>
     <div id="banner" class="container">
-      <div id="left-banner">
+      <div id="left-banner" class="flex-center-full">
         <!-- adicionar um display flex, e direction em column -->
         <div id="img-titulo-banner">
           <h1>
@@ -47,10 +57,10 @@
         <div id="description-banner" class="text-center">
           <p>Atendimento de Segunda à Sábado das 11h às 15h</p>
           <p>Fazemos também Delivery ou Retirada</p>
-          <button>Faça seu pedido<i class="fab fa-whatsapp"></i></button>
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!"><button>Faça seu pedido<i class="fab fa-whatsapp"></i></button></a>
         </div>
       </div>
-      <div id="right-banner">
+      <div class="d-none" id="right-banner">
         <img src="assets/img/feijoada_banner.png" alt="Feijoada" />
       </div>
     </div>
@@ -102,16 +112,25 @@
         <div id="container-fotos">
           <h2>Galeria</h2>
           <div id="box-fotos">
-            <img class="img-fluid" src="./assets/Fotos/Captura de tela 2021-02-18 130501.jpg" alt="foto1">
-            <img class="img-fluid" src="./assets/Fotos/19.png" alt="foto1">
-            <img class="img-fluid" src="./assets/Fotos/20.png" alt="foto1">
-            <img class="img-fluid" src="./assets/Fotos/28.png" alt="foto1">
-            <img class="img-fluid" src="./assets/Fotos/7.png" alt="foto1">
-            <img class="img-fluid" src="./assets/Fotos/12.png" alt="foto1">
-            <img class="img-fluid" src="./assets/Fotos/Feijoada.jpg" alt="foto1">
-            <img class="img-fluid" src="./assets/Fotos/Captura de tela 2021-02-18 130347.jpg" alt="foto1">
+            <img class="img-fluid small-img" src="./assets/Fotos/Captura de tela 2021-02-18 130501.jpg" alt="foto1">
+            <img class="img-fluid small-img" src="./assets/Fotos/19.png" alt="foto1">
+            <img class="img-fluid small-img" src="./assets/Fotos/20.png" alt="foto1">
+            <img class="img-fluid small-img" src="./assets/Fotos/28.png" alt="foto1">
+            <img class="img-fluid small-img" src="./assets/Fotos/7.png" alt="foto1">
+            <img class="img-fluid small-img" src="./assets/Fotos/12.png" alt="foto1">
+            <img class="img-fluid small-img" src="./assets/Fotos/Feijoada.jpg" alt="foto1">
+            <img class="img-fluid small-img" src="./assets/Fotos/Captura de tela 2021-02-18 130347.jpg" alt="foto1">
           </div>
         </div>
+      </div>
+
+      <div class="modal flex-center-full"><!-- .flex-center-full -->
+
+          <div class="modal-content flex-center-full"> <!-- .flex-center-full -->
+            <img id="modal-img" src="/assets/Fotos/Captura de tela 2021-02-18 130347.jpg" alt="Foto restaurante rapa do tacho">
+          </div>
+          <span class="flex-center-full" id="btn-close">&times;</span>
+
       </div>
 
       <div id="box-equipe" class="container">
@@ -186,7 +205,7 @@
       <div id="box-whats-delivery" class="box-info-contato text-align"> 
         <div>
           <p>Delivery ou Retirada, ligue ou peça via Whatsapp</p>
-          <a href="#" id="whats">
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!" id="whats" onmouseover="actions.hoverImgDelivery()" onmouseout="actions.removeHover()">
             <h4>(11) 98492-8128</h4><i class="fab fa-whatsapp"></i>
           </a>
         </div>

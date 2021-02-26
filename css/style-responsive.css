@@ -1,0 +1,82 @@
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+@media (max-width: 575.98px) { 
+    /* ====================== Global ====================== */
+    html{
+        font-size: 80.5%;
+    }
+
+    .d-none{
+        display: none !important;
+    }
+
+    .show-menu{
+        height: 100%;
+        transition: all .5s;
+    }
+
+    /* ====================== Header ====================== */
+
+    header ul{
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+        height: 0;
+    }
+
+    header li{
+        margin: 15px 0;
+        width: 100%
+    }
+
+    #close-menu, #menu-mobile{
+        display:flex;
+    }
+
+    #close-menu{
+        display:block;
+    }
+
+    #logo {
+        height: 90px;
+        width: 90px;
+
+      }
+      
+      #logo img {
+        height: 50px;
+        transition: all 0.3s;
+      }
+
+    /* ====================== Banner ====================== */
+
+    #banner{
+        height: 65vh;
+    }
+
+    #description-banner {
+        width: max(40%, 320px);
+    }
+
+    #img-titulo-banner img {
+        width: max(25vw, 360px);
+    }
+
+    /* ====================== Section Cardápio ====================== */
+
+    #box-cardapio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+    #box-btn-cardapio{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+ }
+
+/* // Dispositivos small (telefones em modo paisagem, com menos de 768px) */
+/* @media (max-width: 767.98px) { ... } */

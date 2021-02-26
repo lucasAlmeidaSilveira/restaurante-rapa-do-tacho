@@ -134,3 +134,46 @@ const showDishSelect = {
 
     }
 }
+
+const actions = {
+    hoverImgDelivery(){
+        document.querySelector('#box-whats-delivery img').classList.add('img-delivery-hover')
+    },
+
+    removeHover(){
+        document.querySelector('#box-whats-delivery img').classList.remove('img-delivery-hover')
+    }
+}
+
+let imagens = document.querySelectorAll('.small-img')
+let modal = document.querySelector('.modal')
+let modalImg = document.querySelector('#modal-img')
+let btClose = document.querySelector('#btn-close')
+let srcValue = ''
+
+for(let i = 0; i < imagens.length; i++) {
+    imagens[i].addEventListener('click', (e) =>{
+        e.preventDefault()
+        srcValue = imagens[i].getAttribute('src')
+        modalImg.setAttribute('src', srcValue)
+        modal.classList.toggle('modal-active')
+    })
+}
+
+btClose.addEventListener('click', (e) =>{
+    e.preventDefault()
+    modal.classList.toggle('modal-active')
+})
+
+let btnMenuMobile = document.querySelector('#btn-menu-mobile')
+
+const mobile = {
+    btnMenuMobile: document.querySelector('#btn-menu-mobile'),
+    navMenuMobile: document.querySelector('#menu-mobile'),
+    menuMobile: document.querySelector('header ul'),
+    closeMenuMobile: document.querySelector('#close-menu'),
+    openMenuMobile(){
+        this.menuMobile.classList.toggle('show-menu')
+        this.navMenuMobile.classList.toggle('d-none')
+    }
+}
