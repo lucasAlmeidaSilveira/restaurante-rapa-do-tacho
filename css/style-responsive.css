@@ -1,8 +1,8 @@
 /* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
-@media (max-width: 575.98px) { 
+@media (max-width: 740px) { 
     /* ====================== Global ====================== */
     html{
-        font-size: 80.5%;
+        font-size: 75%;
     }
 
     .d-none{
@@ -14,7 +14,21 @@
         transition: all .5s;
     }
 
+    .container{
+        width: 100%;
+        padding: 4rem 2rem;
+    }
+
+    body, #cardapio, #days-week, #box-galeria,
+    #box-equipe, footer{
+        background-size: contain;
+    }
+
     /* ====================== Header ====================== */
+
+    header.container{
+        padding-bottom: 0;
+    }
 
     header ul{
         flex-direction: column;
@@ -32,6 +46,10 @@
         display:flex;
     }
 
+    #menu-mobile{
+        padding-bottom: 1rem;
+    }
+
     #close-menu{
         display:block;
     }
@@ -40,18 +58,16 @@
         height: 90px;
         width: 90px;
 
-      }
+    }
       
-      #logo img {
+    #logo img {
         height: 50px;
         transition: all 0.3s;
-      }
+    }
+
+    /* ====================== Titles ====================== */
 
     /* ====================== Banner ====================== */
-
-    #banner{
-        height: 65vh;
-    }
 
     #description-banner {
         width: max(40%, 320px);
@@ -63,20 +79,35 @@
 
     /* ====================== Section Cardápio ====================== */
 
+    #cardapio{
+        height: auto;
+    }
+
     #box-cardapio {
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
-    #box-btn-cardapio{
-        display: flex;
+    #box-btn-cardapio {
+        justify-content: space-around;
         flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
+        flex-wrap: wrap
+      }
+      
+
+    .btn-cardapio {
+        margin-top: 12px;
+        width: 100px;
     }
 
- }
+    .dishes-day {
+        grid-template-columns: 1fr;
+        padding: 0 20px 20px;
+    }
+
+
 
 /* // Dispositivos small (telefones em modo paisagem, com menos de 768px) */
 /* @media (max-width: 767.98px) { ... } */
+}

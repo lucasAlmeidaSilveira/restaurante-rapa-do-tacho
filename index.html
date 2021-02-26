@@ -34,13 +34,13 @@
     <nav>
       <ul>
         <li id="close-menu" onclick="mobile.openMenuMobile()"><a href="#">&times;</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a class="item-menu" href="#">Home</a></li>
+        <li><a class="item-menu" href="#cardapio">Cardápio</a></li>
         <div class="d-none" id="logo">
           <a href="#"><img src="assets/img/logo.png" alt="Logo Rapa do Tacho" /></a>
         </div>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a class="item-menu" href="#galeria">Galeria</a></li>
+        <li><a class="item-menu" href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -74,22 +74,22 @@
           <h2>Cardápio</h2>
           <div id="box-btn-cardapio">
 
-            <a onclick="showDishSelect.showDish(cardapioSegunda,'#select-segunda div')" id="select-segunda">
+            <a href="#days-week" onclick="showDishSelect.showDish(cardapioSegunda,'#select-segunda div')" id="select-segunda">
               <div class="btn-cardapio">Segunda</div>
             </a>
-            <a onclick="showDishSelect.showDish(cardapioTerca,'#select-terca div')" id="select-terca">
+            <a href="#days-week" onclick="showDishSelect.showDish(cardapioTerca,'#select-terca div')" id="select-terca">
               <div class="btn-cardapio active">Terça</div>
             </a>
-            <a onclick="showDishSelect.showDish(cardapioQuartaSabado,'#select-quarta div') " id="select-quarta">
+            <a href="#days-week" onclick="showDishSelect.showDish(cardapioQuartaSabado,'#select-quarta div') " id="select-quarta">
               <div class="btn-cardapio">Quarta</div>
             </a>
-            <a onclick="showDishSelect.showDish(cardapioQuinta,'#select-quinta div')" id="select-quinta">
+            <a href="#days-week" onclick="showDishSelect.showDish(cardapioQuinta,'#select-quinta div')" id="select-quinta">
               <div class="btn-cardapio">Quinta</div>
             </a>
-            <a onclick="showDishSelect.showDish(cardapioSexta,'#select-sexta div')" id="select-sexta">
+            <a href="#days-week" onclick="showDishSelect.showDish(cardapioSexta,'#select-sexta div')" id="select-sexta">
               <div class="btn-cardapio">Sexta</div>
             </a>
-            <a onclick="showDishSelect.showDish(cardapioQuartaSabado,'#select-sabado div')" id="select-sabado">
+            <a href="#days-week" onclick="showDishSelect.showDish(cardapioQuartaSabado,'#select-sabado div')" id="select-sabado">
               <div class="btn-cardapio">Sábado</div>
             </a>
 
@@ -98,7 +98,7 @@
 
         <div class="dishes-day">
           <div class="col-1">
-            <h3>Pratos do dia</h3>
+            <h3 class="d-none">Pratos do dia</h3>
             <div id="box-dish-main"></div>
             <div id="box-dish"></div>
           </div>

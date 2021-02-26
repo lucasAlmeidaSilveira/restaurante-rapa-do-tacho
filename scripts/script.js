@@ -142,7 +142,12 @@ const actions = {
 
     removeHover(){
         document.querySelector('#box-whats-delivery img').classList.remove('img-delivery-hover')
+    },
+
+    fecharModal(){
+        modal.classList.toggle('modal-active')
     }
+
 }
 
 let imagens = document.querySelectorAll('.small-img')
@@ -160,13 +165,21 @@ for(let i = 0; i < imagens.length; i++) {
     })
 }
 
+// fechando modal foto
 btClose.addEventListener('click', (e) =>{
     e.preventDefault()
-    modal.classList.toggle('modal-active')
+    actions.fecharModal()
 })
+
+window.onkeyup = (e) => {
+    if (e.keyCode == 27) {
+        actions.fecharModal()
+    }
+}
 
 let btnMenuMobile = document.querySelector('#btn-menu-mobile')
 
+//abrir menu mobile
 const mobile = {
     btnMenuMobile: document.querySelector('#btn-menu-mobile'),
     navMenuMobile: document.querySelector('#menu-mobile'),
@@ -175,5 +188,6 @@ const mobile = {
     openMenuMobile(){
         this.menuMobile.classList.toggle('show-menu')
         this.navMenuMobile.classList.toggle('d-none')
+        
     }
 }

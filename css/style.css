@@ -109,7 +109,7 @@ header ul li a {
   transition: all 0.3s;
 }
 
-header ul li a:hover {
+header ul li a.item-menu:hover {
   background: var(--vinho);
   color: var(--amarelo);
 }
@@ -166,10 +166,9 @@ button:hover {
 
 #menu-mobile{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 0 20vw;
 }
 
 #menu-mobile i{
