@@ -495,6 +495,11 @@ footer {
   padding-bottom: 4rem;
 }
 
+#contato{
+  display: flex;
+  flex-direction: column;
+}
+
 .box-info-contato {
   background: rgba(255, 255, 255, 0.2);
   display: flex;
@@ -503,7 +508,7 @@ footer {
   flex-direction: row;
   width: max(20vw, 480px);
   padding: 15px;
-  margin: 25px 0;
+  margin-bottom: 25px;
 }
 
 .box-info-contato p {
@@ -558,4 +563,24 @@ footer {
   font-size: 3.6rem;
   color: #34af23;
   margin-left: 7px;
+}
+
+#redes-sociais{
+  text-align: right;
+  font-size: 3rem;
+}
+
+#redes-sociais i{
+  color: #fff;
+  margin-left: 15px;
+}
+
+#redes-sociais a:hover {
+  text-shadow: 1px 1px 8px #000;
+}
+
+#direitos{
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 1rem;
 }

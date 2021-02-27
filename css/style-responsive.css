@@ -1,5 +1,5 @@
 /* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
-@media (max-width: 740px) { 
+@media (max-width: 780px) { 
     /* ====================== Global ====================== */
     html{
         font-size: 75%;
@@ -10,7 +10,7 @@
     }
 
     .show-menu{
-        height: 100%;
+        height: 256px;
         transition: all .5s;
     }
 
@@ -35,6 +35,7 @@
         align-items: start;
         padding: 0;
         height: 0;
+        transition: all .5s;
     }
 
     header li{
@@ -72,7 +73,19 @@
 
     /* ====================== Titles ====================== */
 
+    #contato h2{
+        text-align: center;
+    }
+
+    #box-whats-delivery h4{
+        font-size: 3.6rem;
+    }
     /* ====================== Banner ====================== */
+
+    #banner{
+        height: auto;
+        padding-top: 0;
+    }
 
     #description-banner {
         width: max(40%, 320px);
@@ -139,6 +152,41 @@
     }
 
 
+    footer {
+        padding-bottom: 0;
+    }
+
+    #contato{
+        display: block
+    }
+
+    .box-info-contato{
+        width: auto;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    #box-whats-delivery div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #box-whats-delivery p{
+        font-size: 1rem;
+    }
+
+    #whats i {
+        font-size: 3rem;
+    }
+      
+    #redes-sociais{
+        text-align: center;
+        font-size: 3rem;
+    }
 
 
 

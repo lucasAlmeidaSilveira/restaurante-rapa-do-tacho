@@ -33,7 +33,6 @@
     </div>
     <nav>
       <ul>
-        <li id="close-menu" onclick="mobile.openMenuMobile()"><a href="#">&times;</a></li>
         <li><a class="item-menu" href="#">Home</a></li>
         <li><a class="item-menu" href="#cardapio">Cardápio</a></li>
         <div class="d-none" id="logo">
@@ -57,7 +56,9 @@
         <div id="description-banner" class="text-center">
           <p>Atendimento de Segunda à Sábado das 11h às 15h</p>
           <p>Fazemos também Delivery ou Retirada</p>
-          <a target="_blank" href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!"><button>Faça seu pedido<i class="fab fa-whatsapp"></i></button></a>
+          <a target="_blank"
+            href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!"><button>Faça
+              seu pedido<i class="fab fa-whatsapp"></i></button></a>
         </div>
       </div>
       <div class="d-none" id="right-banner">
@@ -124,12 +125,15 @@
         </div>
       </div>
 
-      <div class="modal flex-center-full"><!-- .flex-center-full -->
+      <div class="modal flex-center-full">
+        <!-- .flex-center-full -->
 
-          <div class="modal-content flex-center-full"> <!-- .flex-center-full -->
-            <img id="modal-img" src="/assets/Fotos/Captura de tela 2021-02-18 130347.jpg" alt="Foto restaurante rapa do tacho">
-          </div>
-          <span class="flex-center-full" id="btn-close">&times;</span>
+        <div class="modal-content flex-center-full">
+          <!-- .flex-center-full -->
+          <img id="modal-img" src="/assets/Fotos/Captura de tela 2021-02-18 130347.jpg"
+            alt="Foto restaurante rapa do tacho">
+        </div>
+        <span class="flex-center-full" id="btn-close">&times;</span>
 
       </div>
 
@@ -189,7 +193,8 @@
   <footer>
     <div id="contato" class="container">
       <h2>Contato</h2>
-      <div id="localization" class="box-info-contato"> <!-- flex direction row wrap; width 40 vw-->
+      <div id="localization" class="box-info-contato">
+        <!-- flex direction row wrap; width 40 vw-->
         <i class="fas fa-map-marker-alt"></i>
         <div id="address">
           <p>Rua: Professora Lucila Cerqueira, 369</p>
@@ -197,21 +202,35 @@
         </div>
 
       </div>
-      <div id="phone" class="box-info-contato"> <!-- flex direction row wrap; width 40 vw-->
+      <div id="phone" class="box-info-contato">
+        <!-- flex direction row wrap; width 40 vw-->
         <i class="fas fa-phone-alt"></i>
         <p>(11) 2552-8062 | (11) 98492-8128</p>
       </div>
 
-      <div id="box-whats-delivery" class="box-info-contato text-align"> 
+      <div id="box-whats-delivery" class="box-info-contato text-align">
         <div>
           <p>Delivery ou Retirada, ligue ou peça via Whatsapp</p>
-          <a target="_blank" href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!" id="whats" onmouseover="actions.hoverImgDelivery()" onmouseout="actions.removeHover()">
+          <a target="_blank"
+            href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!"
+            id="whats" onmouseover="actions.hoverImgDelivery()" onmouseout="actions.removeHover()">
             <h4>(11) 98492-8128</h4><i class="fab fa-whatsapp"></i>
           </a>
         </div>
-          <img class="img-fluid" src="./assets/img/delivery.png" alt="ícone moto delivery">
+        <img class="d-none img-fluid" src="./assets/img/delivery.png" alt="ícone moto delivery">
+      </div>
+      <div id="redes-sociais">
+        <a target="_blank" href="https://pt-br.facebook.com/restauranterapadotacho/"><i class="fab fa-facebook"
+            aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.instagram.com/restauranterapadotacho/"><i class="fab fa-instagram"
+            aria-hidden="true"></i></a>
+      </div>
+      <div id="direitos" class="text-center">
+        <span>© Restaurante Rapa do Tacho | Desenvolvido por Pixels Web</span>
       </div>
     </div>
+
+
   </footer>
 
   <script src="scripts/script.js"></script>

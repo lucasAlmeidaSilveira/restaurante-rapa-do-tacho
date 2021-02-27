@@ -189,7 +189,7 @@ const mobile = {
     closeMenuMobile: document.querySelector('#close-menu'),
     openMenuMobile(){
         this.menuMobile.classList.toggle('show-menu')
-        this.navMenuMobile.classList.toggle('d-none')
+        /* this.navMenuMobile.classList.toggle('d-none') */
         
     }
 }
