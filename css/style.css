@@ -508,7 +508,7 @@ footer {
   flex-direction: row;
   width: max(20vw, 480px);
   padding: 15px;
-  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .box-info-contato p {
@@ -582,5 +582,5 @@ footer {
 #direitos{
   margin-top: 1rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: .9rem;
 }
