@@ -48,4 +48,7 @@ switch (dayWeekToggle.dayWeekNow()){
     case 6:
         showDishSelect.showDish(cardapioQuartaSabado,'#select-sabado div')
     break
+    default: 
+        showDishSelect.showDish(cardapioSegunda,'#select-segunda div')
+    break
 }
