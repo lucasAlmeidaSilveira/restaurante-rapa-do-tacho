@@ -585,3 +585,9 @@ footer {
   color: #fff;
   font-size: .9rem;
 }
+
+#direitos a{
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+}
