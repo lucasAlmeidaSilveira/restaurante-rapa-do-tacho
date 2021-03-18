@@ -1,25 +1,31 @@
+let imagens = document.querySelectorAll(".small-img");
+let modal = document.querySelector(".modal");
+let modalImg = document.querySelector("#modal-img");
+let btClose = document.querySelector("#btn-close");
+let srcValue = "";
+
 const dayWeekToggle = {
-    dayWeekNow(){
-        let d = new Date()
-        return d.getDay()
-    }
-}
+  dayWeekNow() {
+    let d = new Date();
+    return d.getDay();
+  },
+};
 
 const DOM = {
-    dishesContainerMain: document.querySelector('.dishes-day #box-dish-main'),
-    dishesContainer: document.querySelector('.dishes-day #box-dish'),
-    dishesContainerCol: document.querySelector('.dishes-day #right-col'),
+  dishesContainerMain: document.querySelector(".dishes-day #box-dish-main"),
+  dishesContainer: document.querySelector(".dishes-day #box-dish"),
+  dishesContainerCol: document.querySelector(".dishes-day #right-col"),
 
-    addDishMain(dish, index){
-        const div = document.createElement('div')
-        div.innerHTML = this.innerHTMLDishMain(dish)
+  addDishMain(dish, index) {
+    const div = document.createElement("div");
+    div.innerHTML = this.innerHTMLDishMain(dish);
 
-        this.dishesContainerMain.appendChild(div)
-    },
+    this.dishesContainerMain.appendChild(div);
+  },
 
-    innerHTMLDishMain(dish){
-        if(dish == cardapioQuartaSabado){
-            let dishDay = `
+  innerHTMLDishMain(dish) {
+    if (dish == cardapioQuartaSabado) {
+      let dishDay = `
             <h4>${dish[0].name}</h4>
             <div class="contents-box-dish">
                 <div class="contents-dish-left">
@@ -35,10 +41,10 @@ const DOM = {
                     <p>R$ ${dish[0].price[3]}</p>
                 </div>
             </div>
-        `
-        return dishDay
-        } else{
-            const dishDay = `
+        `;
+      return dishDay;
+    } else {
+      const dishDay = `
             <h4>${dish[0].name}</h4>
             <div class="contents-box-dish">
                 <div class="contents-dish-left">
@@ -50,27 +56,25 @@ const DOM = {
                     <p>R$ ${dish[0].price[1]}</p>
                 </div>
             </div>
-        `
-        return dishDay
-        }
+        `;
+      return dishDay;
+    }
+  },
 
-        
-    },
+  addDish(dish) {
+    dish.slice(1).forEach((i) => {
+      const div = document.createElement("div");
+      div.innerHTML = this.innerHTMLDish(i);
 
-    addDish(dish){
-        dish.slice(1).forEach((i) => {
+      i.id >= 4
+        ? this.dishesContainerCol.appendChild(div)
+        : this.dishesContainer.appendChild(div);
+    });
+  },
 
-            const div = document.createElement('div')
-            div.innerHTML = this.innerHTMLDish(i)
-
-            i.id >= 4 ? this.dishesContainerCol.appendChild(div) : this.dishesContainer.appendChild(div)
-
-        })
-    },
-
-    innerHTMLDish(i){
-        if(i.name == 'Sobremesas'){
-            let dishDay = `
+  innerHTMLDish(i) {
+    if (i.name == "Sobremesas") {
+      let dishDay = `
             <div class="dish">
                 <h4>${i.name}</h4>
                 <div class="contents-box-dish">
@@ -84,10 +88,10 @@ const DOM = {
                     </div>
                 </div>
             </div>
-        `
-        return dishDay
-        }
-        let dishDay = `
+        `;
+      return dishDay;
+    }
+    let dishDay = `
             <div class="dish">
                 <h4>${i.name}</h4>
                 <div class="contents-box-dish">
@@ -101,95 +105,131 @@ const DOM = {
                     </div>
                 </div>
             </div>
-        `
-        return dishDay
-    }
-}
+        `;
+    return dishDay;
+  },
+};
 
 const Dish = {
-    all: [],
-    add(dish){
-        Dish.all.push(dish)
-    },
-}
+  all: [],
+  add(dish) {
+    Dish.all.push(dish);
+  },
+};
 
 const showDishSelect = {
-    addRemoveClass(element){
-        document.querySelectorAll('#box-btn-cardapio a div').forEach((i) => {i.classList.remove('active')})
-        document.querySelector(element).classList.add('active')
-    },
+  addRemoveClass(element) {
+    document.querySelectorAll("#box-btn-cardapio a div").forEach((i) => {
+      i.classList.remove("active");
+    });
+    document.querySelector(element).classList.add("active");
+  },
 
-    clearHTML(){
-        DOM.dishesContainerMain.innerHTML = ''
-        DOM.dishesContainer.innerHTML = ''
-        DOM.dishesContainerCol.innerHTML = ''
-    },
+  clearHTML() {
+    DOM.dishesContainerMain.innerHTML = "";
+    DOM.dishesContainer.innerHTML = "";
+    DOM.dishesContainerCol.innerHTML = "";
+  },
 
-    showDish(dish, element){
-        this.addRemoveClass(element)
-        this.clearHTML()
-        DOM.addDishMain(dish)
+  showDish(dish, element) {
+    this.addRemoveClass(element);
+    this.clearHTML();
+    DOM.addDishMain(dish);
 
-        DOM.addDish(dish)
-
-    }
-}
+    DOM.addDish(dish);
+  },
+};
 
 const actions = {
-    hoverImgDelivery(){
-        document.querySelector('#box-whats-delivery img').classList.add('img-delivery-hover')
-    },
+  totalSlides: document.querySelectorAll(".banner").length,
+  currentSlide: 0,
+  hoverImgDelivery() {
+    document
+      .querySelector("#box-whats-delivery img")
+      .classList.add("img-delivery-hover");
+  },
 
-    removeHover(){
-        document.querySelector('#box-whats-delivery img').classList.remove('img-delivery-hover')
-    },
+  removeHover() {
+    document
+      .querySelector("#box-whats-delivery img")
+      .classList.remove("img-delivery-hover");
+  },
 
-    fecharModal(){
-        modal.classList.toggle('modal-active')
-        document.querySelector('html').style.overflow = 'auto'
+  fecharModal() {
+    modal.classList.toggle("modal-active");
+    document.querySelector("html").style.overflow = "auto";
+  },
+
+  widthSlide() {
+    document.querySelector(
+      "#slider",
+    ).style.width = `calc(100vw * ${this.totalSlides} )`;
+  },
+
+  nextSlide() {
+    this.currentSlide--;
+    if (this.currentSlide < 0) {
+      this.currentSlide = this.totalSlides - 1;
     }
+    this.goSlide();
+  },
 
-}
+  backSlide() {
+    this.currentSlide++;
+    if (this.currentSlide > this.totalSlides - 1) {
+      this.currentSlide = 0;
+    }
+    this.goSlide();
+  },
 
-let imagens = document.querySelectorAll('.small-img')
-let modal = document.querySelector('.modal')
-let modalImg = document.querySelector('#modal-img')
-let btClose = document.querySelector('#btn-close')
-let srcValue = ''
+  goSlide() {
+    let sliderWidth = document.querySelector(".banner").clientWidth;
+    let newMargin = this.currentSlide * sliderWidth;
+    document.querySelector("#slider").style.marginLeft = `-${newMargin}px`;
+  },
+};
 
-for(let i = 0; i < imagens.length; i++) {
-    imagens[i].addEventListener('click', (e) =>{
-        e.preventDefault()
-        srcValue = imagens[i].getAttribute('src')
-        modalImg.setAttribute('src', srcValue)
-        modal.classList.toggle('modal-active')
-        document.querySelector('html').style.overflow = 'hidden'
-    })
+for (let i = 0; i < imagens.length; i++) {
+  imagens[i].addEventListener("click", (e) => {
+    e.preventDefault();
+    srcValue = imagens[i].getAttribute("src");
+    modalImg.setAttribute("src", srcValue);
+    modal.classList.toggle("modal-active");
+    document.querySelector("html").style.overflow = "hidden";
+  });
 }
 
 // fechando modal foto
-btClose.addEventListener('click', (e) =>{
-    e.preventDefault()
-    actions.fecharModal()
-})
+btClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  actions.fecharModal();
+});
 
 window.onkeyup = (e) => {
-    if (e.keyCode == 27) {
-        actions.fecharModal()
-    }
-}
+  if (e.keyCode == 27) {
+    actions.fecharModal();
+  }
+};
 
-let btnMenuMobile = document.querySelector('#btn-menu-mobile')
+let btnMenuMobile = document.querySelector("#btn-menu-mobile");
 
 //abrir menu mobile
 const mobile = {
-    btnMenuMobile: document.querySelector('#btn-menu-mobile'),
-    navMenuMobile: document.querySelector('#menu-mobile'),
-    menuMobile: document.querySelector('header ul'),
-    closeMenuMobile: document.querySelector('#close-menu'),
-    openMenuMobile(){
-        this.menuMobile.classList.toggle('show-menu')
-        /* this.navMenuMobile.classList.toggle('d-none') */
-        
-    }
-}
+  btnMenuMobile: document.querySelector("#btn-menu-mobile"),
+  navMenuMobile: document.querySelector("#menu-mobile"),
+  menuMobile: document.querySelector("header ul"),
+  closeMenuMobile: document.querySelector("#close-menu"),
+  openMenuMobile() {
+    this.menuMobile.classList.toggle("show-menu");
+    /* this.navMenuMobile.classList.toggle('d-none') */
+  },
+};
+
+const init = () => {
+  actions.widthSlide();
+  setInterval(()=>{
+    actions.nextSlide()
+  }, 5500);
+};
+
+init();

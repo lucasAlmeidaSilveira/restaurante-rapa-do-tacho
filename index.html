@@ -45,25 +45,53 @@
   </header>
 
   <main>
-    <div id="banner" class="container">
-      <div id="left-banner" class="flex-center-full">
-        <!-- adicionar um display flex, e direction em column -->
-        <div id="img-titulo-banner">
-          <h1>
-            <img src="assets/img/frase_banner.svg" alt="Experimente nossa feijoada" />
-          </h1>
+    <div id="slider">
+      <div class="banner" class="container">
+        <div id="left-banner" class="flex-center-full">
+          <!-- adicionar um display flex, e direction em column -->
+          <div id="img-titulo-banner">
+            <h1>
+              <img src="assets/img/frase_banner.svg" alt="Experimente nossa feijoada" />
+            </h1>
+          </div>
+          <div id="description-banner" class="text-center">
+            <p>Atendimento de Segunda à Sábado das 11h às 15h</p>
+            <p>Fazemos também Delivery ou Retirada</p>
+            <a target="_blank"
+              href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!"><button>Faça
+                seu pedido<i class="fab fa-whatsapp"></i></button></a>
+          </div>
         </div>
-        <div id="description-banner" class="text-center">
-          <p>Atendimento de Segunda à Sábado das 11h às 15h</p>
-          <p>Fazemos também Delivery ou Retirada</p>
-          <a target="_blank"
-            href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!"><button>Faça
-              seu pedido<i class="fab fa-whatsapp"></i></button></a>
+        <div class="d-none" id="right-banner">
+          <img src="assets/img/feijoada_banner.png" alt="Feijoada" />
         </div>
       </div>
-      <div class="d-none" id="right-banner">
-        <img src="assets/img/feijoada_banner.png" alt="Feijoada" />
+      <div class="banner" class="container">
+        <div id="left-banner" class="flex-center-full">
+          <!-- adicionar um display flex, e direction em column -->
+          <div class="titulo-banner">
+            <h1 >
+              Virado à Paulista
+            </h1>
+          </div>
+          <div id="description-banner" class="text-center">
+            <p>Atendimento de Segunda à Sábado das 11h às 15h</p>
+            <p>Fazemos também Delivery ou Retirada</p>
+            <a target="_blank"
+              href="https://api.whatsapp.com/send?phone=5511984928128&text=Boa%20tarde!%20Gostaria%20de%20fazer%20um%20pedido!"><button>Faça
+                seu pedido<i class="fab fa-whatsapp"></i></button></a>
+          </div>
+        </div>
+        <div class="d-none" id="right-banner">
+          <img src="assets/img/virado_a_paulista.png" alt="Virado à Paulista" />
+        </div>
       </div>
+    </div>
+    <div class="controls-slide text-center">
+
+        <i id="slide-1" onclick="actions.backSlide()" class="fas fa-chevron-circle-left"></i>
+        <i id="slide-2" onclick="actions.nextSlide()" class="fas fa-chevron-circle-right"></i>
+
     </div>
     <div id="box-arrow-down" class="text-center">
       <a href="#cardapio"><i class="fas fa-arrow-down"></i></a>
@@ -226,7 +254,7 @@
             aria-hidden="true"></i></a>
       </div>
       <div id="direitos" class="text-center">
-        <span>© Restaurante Rapa do Tacho | Desenvolvido por <a target="_blank" href="http://pixelsweb.epizy.com/">Pixels Web</a></span>
+        <span>© Restaurante Rapa do Tacho | Desenvolvido por Pixels Web</span>
       </div>
     </div>
 

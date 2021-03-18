@@ -52,6 +52,16 @@ body {
 }
 
 /* ====================== Titles ====================== */
+
+.titulo-banner h1{
+  font-family: "Rum Raisin", sans-serif;
+  font-weight: normal;
+  font-size: 5rem;
+  color: var(--amarelo);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.87);
+}
+
 h2,
 h4 {
   font-family: "Rum Raisin", sans-serif;
@@ -162,7 +172,6 @@ button:hover {
 .active {
   color: var(--vinho);
   background: var(--amarelo);
-  opacity: 1;
   transform: scale(1.05);
 }
 
@@ -193,7 +202,7 @@ header ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  border-radius: 2rem;
   padding: 12px 30px;
   height: 55px;
   width: min(75vw, 800px);
@@ -210,6 +219,10 @@ header ul li {
 
 #close-menu, #menu-mobile{
   display: none;
+}
+
+.d-none#logo, header ul{
+  box-shadow: 1px 1px 20px rgb(0 0 0 / 40%);
 }
 
 #logo {
@@ -236,10 +249,34 @@ header ul li {
 
 /* ====================== Banner ====================== */
 
-#banner {
+#slider{
+  display: flex;
+  transition: all ease .4s;
+}
+
+.controls-slide{
+  margin: auto;
+  display: flex;
+  width: 40vw;
+  align-items: center;
+  justify-content:space-around;
+  margin-top: -3rem;
+}
+
+.controls-slide i{
+  font-size: 2rem;
+  color: var(--amarelo);
+  opacity: .6;
+  cursor: pointer;
+  text-shadow: 1px 1px 20px #000;
+  transition: all ease .2s
+}
+
+.banner {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  width: 100vw;
   height: 75vh;
 }
 
@@ -291,7 +328,7 @@ header ul li {
   opacity: 0.7;
   transition: all 0.2s;
 }
-#box-arrow-down i:hover {
+#box-arrow-down i:hover, .controls-slide i:hover, .btn-cardapio:hover,.active{
   opacity: 1;
 }
 
@@ -584,10 +621,4 @@ footer {
   margin-top: 1rem;
   color: #fff;
   font-size: .9rem;
-}
-
-#direitos a{
-  color: #fff;
-  font-weight: 600;
-  text-decoration: underline;
 }
